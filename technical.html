@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Skills - Tushar Shetty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1553848491-660d8e37f37d') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-top: 60px;
+      animation: fadeInDown 2s forwards;
+      color: #e8ba14;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown {
+      width: 80%;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+
+    .dropdown-header {
+      padding: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #222;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-header:hover {
+      background-color: #444;
+    }
+
+    .dropdown-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.8s ease-out;
+      padding: 0 20px;
+    }
+
+    .dropdown.active .dropdown-content {
+      max-height: 600px;
+      padding: 20px;
+    }
+
+    .skill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .skill-item {
+      width: 120px;
+      text-align: center;
+      animation: zoomIn 1s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .skill-item img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .skill-item span {
+      display: block;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Technical Skills Overview</h1>
+
+  <!-- Programming Languages -->
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-header">Programming Languages</div>
+    <div class="dropdown-content">
+      <div class="skill-row">
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/919/919852.png"><span>Python</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/226/226777.png"><span>Java</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png"><span>HTML</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/919/919826.png"><span>CSS</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"><span>JavaScript</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Databases -->
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-header">Databases</div>
+    <div class="dropdown-content">
+      <div class="skill-row">
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png"><span>MySQL</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/919/919836.png"><span>MongoDB</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Frameworks -->
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-header">Frameworks</div>
+    <div class="dropdown-content">
+      <div class="skill-row">
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png"><span>Flask</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png"><span>Django</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png"><span>React</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IDEs -->
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-header">IDEs</div>
+    <div class="dropdown-content">
+      <div class="skill-row">
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969395.png"><span>VS Code</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png"><span>PyCharm</span></div>
+        <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969395.png"><span>Jupyter</span></div>
+        <div class="skill-item"><img src="E:\Ts_portfolio\images\intellij.jpg"><span>IntelliJ</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(element) {
+      element.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

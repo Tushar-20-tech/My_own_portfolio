@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Licenses & Certifications - Tushar Shetty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #111, #333);
+      color: #fff;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 40px;
+      color: #0ff;
+      animation: pulseTitle 2.5s infinite;
+    }
+
+    @keyframes pulseTitle {
+      0% { text-shadow: 0 0 10px #0ff; }
+      50% { text-shadow: 0 0 30px #0ff; }
+      100% { text-shadow: 0 0 10px #0ff; }
+    }
+
+    .certificate-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      margin-bottom: 50px;
+      overflow: hidden;
+      animation: slideInUp 1.5s ease forwards;
+    }
+
+    @keyframes slideInUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .certificate-desc, .certificate-visual {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .certificate-desc {
+      animation: zoomIn 1.2s ease-in-out;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .certificate-desc h2 {
+      font-size: 2em;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+
+    .certificate-desc p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .certificate-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeInRight 1.5s ease;
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(50px);}
+      to { opacity: 1; transform: translateX(0);}
+    }
+
+    .certificate-visual img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.6);
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .certificate-visual img:hover {
+      transform: scale(1.05);
+    }
+
+    .author-link {
+      font-size: 1em;
+      color: #0ff;
+      text-decoration: none;
+      border-bottom: 1px dashed #0ff;
+    }
+
+    .author-link:hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Licenses & Certifications</h1>
+
+  <!-- Certification 1 -->
+  <div class="certificate-container">
+    <div class="certificate-desc">
+      <h2>IBM Certified Data Scientist</h2>
+      <p>
+        This certification validates my expertise in data science concepts, tools, and real-world applications. I learned Python for data analysis, machine learning modeling, and gained experience building AI-powered solutions. It also covers database handling, visualization techniques, and predictive analytics—all geared toward solving complex business challenges with data.
+      </p>
+    </div>
+    <div class="certificate-visual">
+      <img src="E:\Ts_portfolio\images\IBM.jpg" alt="IBM Certificate">
+      <a class="author-link" href="https://ibmcep.cognitiveclass.ai/" target="_blank"> Issued by IBM Career Education Program</a>
+    </div>
+  </div>
+
+  
+   <div class="certificate-container">
+    <div class="certificate-desc">
+      <h2>GeeksforGeeks Certified Python Programmer</h2>
+      <p>
+        🚀 As a GeeksforGeeks Certified Python Programmer, I bring a strong foundation in both fundamental and advanced Python concepts—from data types and control structures to OOP, exception handling, and real-world problem-solving. This certification reflects not just technical ability but a commitment to continuous learning and clean coding practices. 💻
+      </p>
+    </div>
+    <div class="certificate-visual">
+      <img src="E:\Ts_portfolio\images\ggpython.jpg" alt="GeeksforGeeks Certificate">
+      <a class="author-link" href="https://www.geeksforgeeks.org" target="_blank"> Issued by GeeksforGeeks Organisation</a>
+    </div>
+  </div>
+
+</body>
+</html>

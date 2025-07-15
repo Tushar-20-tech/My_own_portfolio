@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore | Tushar Shetty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    header img {
+      width: 220px;
+      border-radius: 20%;
+      border: 2px solid #e3850b;
+      box-shadow: 0 0 15px #944802;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .animated-name {
+      font-size: 48px;
+      margin-top: 20px;
+      color: #00ffff;
+      letter-spacing: 5px;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .letter {
+      opacity: 0;
+      animation: fadeInLetter 1.5s forwards;
+    }
+
+    @keyframes fadeInLetter {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    nav a {
+      padding: 12px 24px;
+      background-color: #00ffff;
+      color: #000;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    nav a:hover {
+      background-color: #eebc3b;
+      transform: scale(1.05);
+    }
+
+    .tech-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://cdn.pixabay.com/photo/2021/07/29/04/31/cyberpunk-6503734_1280.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: -1;
+      animation: pulseBg 20s infinite alternate;
+    }
+
+    @keyframes pulseBg {
+      0% { filter: blur(0px); opacity: 0.15; }
+      100% { filter: blur(2px); opacity: 0.3; }
+    }
+    .gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  justify-items: center;
+  animation: fadeInUp 2s ease-out;
+}
+
+.gallery-container img {
+  width: 80px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00ffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 0 30px #00ffff;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  </style>
+</head>
+<body>
+  <div class="tech-bg"></div>
+
+  <header>
+    <img src="E:\Ts_portfolio\images\mu.jpg" alt="Tushar Shetty" />
+    <div class="animated-name" id="name"></div>
+  </header>
+
+  <nav>
+    <a href="personal_info.html">Personal Info</a><br>
+    <a href="technical.html">Technical Skills</a><br>
+    <a href="projectinfo.html">Project Info</a><br>
+    <a href="license&certification.html">License & Certifications</a><br>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <section id="tech-gallery" style="padding: 40px; text-align: center;">
+  <h2 style="color: #00ffff; font-family: 'Orbitron', sans-serif;">Technology Tools</h2>
+  <div class="gallery-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python" />
+    <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="JavaScript" />
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="HTML5" />
+    <img src="E:\Ts_portfolio\images\java.jpg" alt="java"/>
+    <img src="E:\Ts_portfolio\images\mysql.png" alt="sql" />
+    <img src="E:\Ts_portfolio\images\django.jpg" alt="Django" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1462/1462814.png" alt="Data Science" />
+    <img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" alt="Linux" />
+  </div>
+</section>
+
+  <script>
+    const name = "TUSHAR SHETTY";
+    const nameContainer = document.getElementById('name');
+
+    [...name].forEach((letter, i) => {
+      const span = document.createElement('span');
+      span.className = 'letter';
+      span.textContent = letter;
+      span.style.animationDelay = `${i * 0.1}s`;
+      nameContainer.appendChild(span);
+    });
+  </script>
+</body>
+</html>
